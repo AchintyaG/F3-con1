@@ -1,22 +1,22 @@
 let score = {};
 
-function Openingceremony(score, Race100m){
-    score = {Red:0, Blue:0, Green:0, Yellow:0};
+function OpeningCeremony(score, Race100M){
+    score = {red:0, blue:0, green:0, yellow:0};
     setTimeout(() => {
         console.log("Let's the game begin!");
-        Race100m(score, LongJump);
+        Race100M(score, LongJump);
     }, 1000);
 }
 
-function Race100m(score, LongJump){
+function Race100M(score, LongJump){
     setTimeout(() => {
         console.log("Score");
         console.log(score);
         const obj = {
-             Red: Math.floor(Math.random() * 6) + 10,
-             Blue:  Math.floor(Math.random() * 6) + 10,
-             Green:  Math.floor(Math.random() * 6) + 10,
-             Yellow:  Math.floor(Math.random() * 6) + 10
+             red: Math.floor(Math.random() * 6) + 10,
+             blue:  Math.floor(Math.random() * 6) + 10,
+             green:  Math.floor(Math.random() * 6) + 10,
+             yellow:  Math.floor(Math.random() * 6) + 10
         };
         const sortedArr = Object.keys(obj).sort((a, b) => obj[a] - obj[b]);
         let newObj = {};
@@ -43,34 +43,34 @@ function LongJump(score, HighJump){
 
         const i = Math.floor(Math.random() * 4) + 1;
         if(i == 1){
-            let val = score.Red;
+            let val = score.red;
             val += 150;
-            score.Red = val;
-            console.log("Winner of LongJump is " + "Red");
+            score.red = val;
+            console.log("Winner of LongJump is " + "red");
             console.log("Updated Score");
             console.log(score);
         }
         if(i == 2){
-            let val = score.Blue;
+            let val = score.blue;
             val += 150;
-            score.Blue = val;
-            console.log("Winner of LongJump is " + "Blue");
+            score.blue = val;
+            console.log("Winner of LongJump is " + "blue");
             console.log("Updated Score");
             console.log(score);
         }
         if(i == 3){
-            let val = score.Green;
+            let val = score.green;
             val += 150;
-            score.Green = val;
-            console.log("Winner of LongJump is " + "Green");
+            score.green = val;
+            console.log("Winner of LongJump is " + "green");
             console.log("Updated Score");
             console.log(score);
         }
         if(i == 4){
-            let val = score.Yellow;
+            let val = score.yellow;
             val += 150;
-            score.Yellow = val;
-            console.log("Winner of LongJump is " + "Yellow");
+            score.yellow = val;
+            console.log("Winner of LongJump is " + "yellow");
             console.log("Updated Score");
             console.log(score);
         }
@@ -90,35 +90,35 @@ function HighJump(score, AwardCeremony){
         console.log("Event Was cancelled");
         AwardCeremony(score);
     } else {
-        if(person == "Red"){
-            let val = score.Red;
+        if(person == "red"){
+            let val = score.red;
             val += 100;
-            score.Red = val;
-            console.log("Winner of HighJump is Red");
+            score.red = val;
+            console.log("Winner of HighJump is red");
             console.log("Updated Score");
             console.log(score);
         }
-        if(person == "Blue"){
-            let val = score.Blue;
+        if(person == "blue"){
+            let val = score.blue;
             val += 100;
-            score.Blue = val;
-            console.log("Winner of HighJump is Blue");
+            score.blue = val;
+            console.log("Winner of HighJump is blue");
             console.log("Updated Score");
             console.log(score);
         }
-        if(person == "Green"){
-            let val = score.Green;
+        if(person == "green"){
+            let val = score.green;
             val += 100;
-            score.Green = val;
-            console.log("Winner of HighJump is Green");
+            score.green = val;
+            console.log("Winner of HighJump is green");
             console.log("Updated Score");
             console.log(score);
         }
-        if(person == "Yellow"){
-            let val = score.Yellow;
+        if(person == "yellow"){
+            let val = score.yellow;
             val += 100;
-            score.Yellow = val;
-            console.log("Winner of HighJump is Yellow");
+            score.yellow = val;
+            console.log("Winner of HighJump is yellow");
             console.log("Updated Score");
             console.log(score);
         }
@@ -137,4 +137,4 @@ function AwardCeremony(score){
     console.log(`${sortedArr[n-4]} Came Fourth with ${score[sortedArr[n-4]]} points`);
 }
 
-Openingceremony(score, Race100m);
+OpeningCeremony(score, Race100M);
